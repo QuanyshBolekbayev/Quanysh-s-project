@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,8 +15,13 @@
         .navbar {
             display: flex;
             background-color: #333;
-            padding: 10px;
+            padding: 15px;
             justify-content: space-around;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         .navbar a {
             color: white;
@@ -26,20 +31,34 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-size: 14px;
         }
         .navbar a i {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 5px;
         }
         .navbar a:hover {
             background-color: #575757;
             border-radius: 5px;
         }
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .content {
             padding: 20px;
             background: white;
-            margin: 20px;
+            margin: 20px 0;
             border-radius: 5px;
+            min-height: 200px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
         }
     </style>
 </head>
@@ -47,35 +66,36 @@
     <div class="navbar">
         <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
         <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-        <a href="#profile"><i class="fas fa-user"></i> Personal Profile</a>
-        <a href="#extracurriculars"><i class="fas fa-running"></i> Extracurriculars</a>
-        <a href="#essay"><i class="fas fa-pen"></i> Supplemental Essay</a>
+        <a href="#profile"><i class="fas fa-user"></i> Profile</a>
+        <a href="#extracurriculars"><i class="fas fa-running"></i> Activities</a>
+        <a href="#essay"><i class="fas fa-pen"></i> Essay</a>
     </div>
     
-    <div id="education" class="content">
-        <h2>Education</h2>
-        <p>Education plays a critical role in personal and professional development. It helps individuals acquire knowledge, skills, and competencies that contribute to career growth and societal progress.</p>
-    </div>
-    
-    <div id="projects" class="content">
-        <h2>Projects</h2>
-        <p>Projects demonstrate an individual's ability to apply theoretical knowledge to real-world problems. Examples include software applications, research papers, and engineering prototypes.</p>
-    </div>
-    
-    <div id="profile" class="content">
-        <h2>Personal Profile</h2>
-        <p>A personal profile summarizes one's background, skills, interests, and aspirations. It is commonly used in resumes, portfolios, and social networking sites.</p>
-    </div>
-    
-    <div id="extracurriculars" class="content">
-        <h2>Extracurriculars</h2>
-        <p>Extracurricular activities include sports, clubs, and volunteer work that contribute to a well-rounded personality. Participation in such activities enhances leadership, teamwork, and communication skills.</p>
-    </div>
-    
-    <div id="essay" class="content">
-        <h2>Supplemental Essay</h2>
-        <p>A supplemental essay provides additional information beyond a standard application. It often reflects a candidate’s motivation, values, and unique experiences.</p>
+    <div class="container">
+        <div id="education" class="content">
+            <h2>Education</h2>
+            <p>Education is essential for acquiring knowledge, skills, and competencies necessary for career and personal development.</p>
+        </div>
+        
+        <div id="projects" class="content">
+            <h2>Projects</h2>
+            <p>Projects showcase an individual's ability to apply knowledge to real-world problems, including software applications and research.</p>
+        </div>
+        
+        <div id="profile" class="content">
+            <h2>Personal Profile</h2>
+            <p>A summary of an individual’s background, skills, and aspirations commonly found in resumes and portfolios.</p>
+        </div>
+        
+        <div id="extracurriculars" class="content">
+            <h2>Extracurriculars</h2>
+            <p>Activities such as sports and clubs that help develop leadership, teamwork, and communication skills.</p>
+        </div>
+        
+        <div id="essay" class="content">
+            <h2>Supplemental Essay</h2>
+            <p>An essay providing additional insight into a candidate’s motivations, values, and experiences beyond the application.</p>
+        </div>
     </div>
 </body>
 </html>
-
