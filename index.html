@@ -3,47 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">  <!-- Linking external CSS -->
+    <title>Personal Website</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+            justify-content: space-around;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar a i {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hey! I'm a passionate web developer skilled in HTML, CSS, and JavaScript.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
+    <div class="navbar">
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="#profile"><i class="fas fa-user"></i> Personal Profile</a>
+        <a href="#extracurriculars"><i class="fas fa-running"></i> Extracurriculars</a>
+        <a href="#essay"><i class="fas fa-pen"></i> Supplemental Essay</a>
+    </div>
+    
+    <div id="education" class="content">
+        <h2>Education</h2>
+        <p>Education plays a critical role in personal and professional development. It helps individuals acquire knowledge, skills, and competencies that contribute to career growth and societal progress.</p>
+    </div>
+    
+    <div id="projects" class="content">
         <h2>Projects</h2>
-        <p>Check out some of my work:</p>
-        <a href="#" class="btn">View Projects</a>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: myemail@example.com</p>
-        <p>LinkedIn: <a href="#" class="btn">Connect</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-    </footer>
-
+        <p>Projects demonstrate an individual's ability to apply theoretical knowledge to real-world problems. Examples include software applications, research papers, and engineering prototypes.</p>
+    </div>
+    
+    <div id="profile" class="content">
+        <h2>Personal Profile</h2>
+        <p>A personal profile summarizes one's background, skills, interests, and aspirations. It is commonly used in resumes, portfolios, and social networking sites.</p>
+    </div>
+    
+    <div id="extracurriculars" class="content">
+        <h2>Extracurriculars</h2>
+        <p>Extracurricular activities include sports, clubs, and volunteer work that contribute to a well-rounded personality. Participation in such activities enhances leadership, teamwork, and communication skills.</p>
+    </div>
+    
+    <div id="essay" class="content">
+        <h2>Supplemental Essay</h2>
+        <p>A supplemental essay provides additional information beyond a standard application. It often reflects a candidate’s motivation, values, and unique experiences.</p>
+    </div>
 </body>
 </html>
+
