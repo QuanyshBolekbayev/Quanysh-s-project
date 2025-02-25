@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            background-color: #001f3f;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar .main-title {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .navbar a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 14px;
+            transition: transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #003366;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+        .navbar a i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .mode-toggle {
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            margin-right: 40px;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background: white;
+            margin: 20px 0;
+            border-radius: 10px;
+            min-height: 250px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .dark-mode .content {
+            background: #333;
+            color: #f4f4f4;
+        }
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #001f3f;
+            text-align: center;
+        }
+        .dark-mode h2 {
+            color: #f4f4f4;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="main-title">Bolekbaev Quanysh</div>
+        <div class="nav-links">
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="extracurriculars.html"><i class="fas fa-running"></i> Activities</a>
+            <a href="essay.html"><i class="fas fa-pen"></i> Essay</a>
+        </div>
+        <div class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-adjust"></i>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to My Website!</h2>
+            <p>Explore my academic achievements, projects, extracurricular activities, and personal reflections. This platform serves as a glimpse into my journey, highlighting my dedication, leadership, and passion for growth.</p>
+            <img src="https://source.unsplash.com/900x400/?success,learning" alt="Welcome Image">
+        </div>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
