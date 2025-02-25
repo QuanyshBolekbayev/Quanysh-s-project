@@ -6,8 +6,10 @@
     <title>Personal Website</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -51,14 +53,16 @@
             flex-direction: column;
             align-items: center;
             font-size: 14px;
-        }
-        .navbar a i {
-            font-size: 24px;
-            margin-bottom: 5px;
+            transition: transform 0.3s;
         }
         .navbar a:hover {
             background-color: #003366;
             border-radius: 5px;
+            transform: scale(1.1);
+        }
+        .navbar a i {
+            font-size: 24px;
+            margin-bottom: 5px;
         }
         .mode-toggle {
             cursor: pointer;
@@ -73,26 +77,40 @@
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
         }
         .content {
             padding: 20px;
             background: white;
             margin: 20px 0;
-            border-radius: 5px;
-            min-height: 200px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            min-height: 250px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s, color 0.3s;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .dark-mode .content {
             background: #333;
             color: #f4f4f4;
         }
         h2 {
-            color: #333;
+            font-size: 26px;
+            font-weight: 600;
+            color: #001f3f;
             text-align: center;
         }
         .dark-mode h2 {
             color: #f4f4f4;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -110,6 +128,14 @@
             <i class="fas fa-adjust"></i>
         </div>
     </div>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to My Website</h2>
+            <p>Explore my education, projects, extracurricular activities, and personal essays. Scroll through to learn more about my journey and achievements.</p>
+            <img src="https://source.unsplash.com/900x400/?education,technology" alt="Education Image">
+        </div>
+    </div>
 
     <script>
         function toggleMode() {
@@ -118,5 +144,3 @@
     </script>
 </body>
 </html>
-
-
