@@ -11,21 +11,38 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #f4f4f4;
         }
         .navbar {
             display: flex;
-            background-color: #333;
+            background-color: #001f3f;
             padding: 15px;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
         }
+        .navbar .main-title {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
         .navbar a {
             color: white;
-            padding: 14px 20px;
+            padding: 10px;
             text-decoration: none;
             text-align: center;
             display: flex;
@@ -38,21 +55,21 @@
             margin-bottom: 5px;
         }
         .navbar a:hover {
-            background-color: #575757;
+            background-color: #003366;
             border-radius: 5px;
         }
+        .mode-toggle {
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+        }
         .container {
-            margin-top: 80px;
+            margin-top: 100px;
             padding: 20px;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-        }
-        .main-title {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: left;
-            padding: 10px 20px;
         }
         .content {
             padding: 20px;
@@ -61,53 +78,40 @@
             border-radius: 5px;
             min-height: 200px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .content {
+            background: #333;
+            color: #f4f4f4;
         }
         h2 {
             color: #333;
             text-align: center;
         }
+        .dark-mode h2 {
+            color: #f4f4f4;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#home"><i class="fas fa-home"></i> Home</a>
-        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
-        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-        <a href="#profile"><i class="fas fa-user"></i> Profile</a>
-        <a href="#extracurriculars"><i class="fas fa-running"></i> Activities</a>
-        <a href="#essay"><i class="fas fa-pen"></i> Essay</a>
-    </div>
-    
-    <div class="container">
-        <div id="home" class="content">
-            <h2>AstanaBIL Overview</h2>
-            <p>AstanaBIL is a leading educational institution dedicated to academic excellence, leadership development, and extracurricular enrichment. It offers a wide range of programs aimed at nurturing students' intellectual and personal growth.</p>
+        <div class="main-title">Bolekbaev Quanysh</div>
+        <div class="nav-links">
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="extracurriculars.html"><i class="fas fa-running"></i> Activities</a>
+            <a href="essay.html"><i class="fas fa-pen"></i> Essay</a>
         </div>
-        
-        <div id="education" class="content">
-            <h2>Education</h2>
-            <p>Academic programs, courses, and qualifications offered at AstanaBIL.</p>
-        </div>
-        
-        <div id="projects" class="content">
-            <h2>Projects</h2>
-            <p>Notable projects, research initiatives, and innovations carried out at AstanaBIL.</p>
-        </div>
-        
-        <div id="profile" class="content">
-            <h2>Personal Profile</h2>
-            <p>Background, skills, and personal achievements of students at AstanaBIL.</p>
-        </div>
-        
-        <div id="extracurriculars" class="content">
-            <h2>Extracurriculars</h2>
-            <p>Sports, clubs, community service, and other non-academic activities at AstanaBIL.</p>
-        </div>
-        
-        <div id="essay" class="content">
-            <h2>Supplemental Essay</h2>
-            <p>Reflections, experiences, and insights from students about their journey at AstanaBIL.</p>
+        <div class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-adjust"></i>
         </div>
     </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
