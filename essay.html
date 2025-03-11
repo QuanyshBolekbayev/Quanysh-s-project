@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supplemental Essay - Bolekbaev Quanysh</title>
+    <title>Education - Bolekbaev Quanysh</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -15,9 +15,53 @@
             color: #333;
             text-align: center;
         }
+        .navbar {
+            display: flex;
+            background-color: #001f3f;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .main-title {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .navbar a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 14px;
+            transition: transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #003366;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+        .navbar a i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
         .container {
             max-width: 900px;
-            margin: 100px auto;
+            margin: 120px auto 40px auto;
             padding: 20px;
             background: white;
             border-radius: 10px;
@@ -26,11 +70,9 @@
         h1 {
             color: #001f3f;
         }
-        .essay-content {
+        .education-info {
             font-size: 18px;
             margin-top: 20px;
-            text-align: justify;
-            padding: 0 20px;
         }
         img {
             max-width: 100%;
@@ -38,25 +80,40 @@
             border-radius: 10px;
             margin-top: 15px;
         }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li::before {
+            content: "🏅 ";
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>My Supplemental Essay</h1>
-        <img src="https://source.unsplash.com/900x400/?writing,creativity" alt="Essay">
-        <p class="essay-content">Throughout my academic and personal journey, I have always strived to challenge myself beyond the conventional. As Vice President of my school, a debate club leader, and a dedicated mentor, I have learned the power of leadership, teamwork, and perseverance.</p>
-        <p class="essay-content">My experience in the SkillUp and Mediator System projects has shaped my ability to resolve conflicts and empower others. Each project has been a stepping stone in my growth, enabling me to develop critical problem-solving skills and nurture an environment of collaboration.</p>
-        <p class="essay-content">Oxford University represents an institution that aligns perfectly with my aspirations of academic excellence and societal impact. My passion for learning, combined with my drive to foster positive change, is the foundation of my journey ahead.</p>
+    <div class="navbar">
+        <div class="main-title">Bolekbaev Quanysh</div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="extracurriculars.html"><i class="fas fa-running"></i> Activities</a>
+            <a href="essay.html"><i class="fas fa-pen"></i> Essay</a>
+        </div>
     </div>
 
     <div class="container">
-        <h1>Moment When I Hacked a Non-Computer System</h1>
-        <img src="https://source.unsplash.com/900x400/?education,system" alt="Hacking Education System">
-        <p class="essay-content">"This must be it!" exclaimed a seventh-grader, trying to explain his theory about the school education system to his mom. Ever since I received my first failing grade back in fourth grade, I had been intrigued—how exactly is our education system designed? After all, nothing is perfect; there is always room for improvement or a loophole waiting to be found.</p>
-        <p class="essay-content">Even in elementary school, I noticed that the final yearly grade was the ultimate result, while the quarterly grades were merely stepping stones leading up to it. However, our country’s grading system puts all the emphasis on the final outcome. If it's good, the process leading up to it is often overlooked. Realizing this, I decided to focus on what truly mattered—my yearly grades.</p>
-        <p class="essay-content">My approach to studying was based on the Halo Effect, a phenomenon described by Edward Thorndike. This cognitive bias suggests that people tend to form an overall impression of someone based on a single outstanding trait. I used this principle to my advantage in academics: during the first two quarters, I made sure to achieve only top grades, crafting an image of myself as a diligent and responsible student.</p>
-        <p class="essay-content">When I transferred to a new school (Zhezkazgan BIL) in seventh grade, it was especially important for me to reinforce this image. Teachers took note of my discipline and praised my serious attitude toward studies. However, during the third and fourth quarters, I allowed myself to shift into a more balanced routine, no longer overburdening myself with endless hours of studying. This gave me more freedom for other important pursuits. Yet, thanks to the strong first impression I had created, teachers continued to see me as an “ideal” student. More often than not, I was given the benefit of the doubt, second chances, or a more lenient evaluation—especially compared to troublemakers or classmates who didn’t prioritize their early-quarter grades.</p>
-        <p class="essay-content">In this way, my system allowed me to maintain high final grades (A-B equivalent) with minimal stress, as the yearly grade was simply the arithmetic average of all four quarters. Ironically, we were always told that the third and fourth quarters were the most important. In the end, I continued to secure top grades, and my little "hack" has been working flawlessly for the past nine years.</p>
+        <h1>My Education</h1>
+        <img src="https://source.unsplash.com/900x400/?university,learning" alt="Education">
+        <p class="education-info"><strong>Current School:</strong> AstanaBIL</p>
+        <p class="education-info"><strong>GPA:</strong> 4.0 / 4.0</p>
+        <p class="education-info"><strong>Future University:</strong> University of Oxford</p>
+        <p class="education-info">Oxford University is one of the world's leading institutions, known for its rigorous academics, cutting-edge research, and a history that spans over 900 years.</p>
+        <p class="education-info"><strong>Awards:</strong></p>
+        <ul class="education-info">
+            <li>3rd place in the Regional Chemistry Olympiad</li>
+            <li>2nd place in the Linguistic Olympiad 2022</li>
+        </ul>
     </div>
 </body>
 </html>
+
